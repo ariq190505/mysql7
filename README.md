@@ -27,7 +27,7 @@ SELECT * FROM Perusahaan;
 
 ***Output :***
 
-![alt text](gambar13.png)
+![alt text](gambar/gambar13.png)
 
 
 ***Query MySQL Pada Tabel Departemen***
@@ -50,7 +50,7 @@ SELECT * FROM Departemen;
 
 ***Output :***
 
-![alt text](gambar1.png)
+![alt text](gambar/gambar1.png)
 
 
 ***Query MySQL Pada Tabel Karyawan***
@@ -77,7 +77,7 @@ SELECT * FROM Karyawan;
 
 ***Output :***
 
-![alt text](gambar2.png)
+![alt text](gambar/gambar2.png)
 
 
 ***Query MySQL Pada Tabel Project***
@@ -100,7 +100,7 @@ SELECT * FROM Project;
 
 ***Output :***
 
-![alt text](gambar3.png)
+![alt text](gambar/gambar3.png)
 
 
 ***Query MySQL Pada Tabel Project Deatil***
@@ -130,7 +130,7 @@ SELECT * FROM Project_detail;
 
 ***Output :***
 
-![alt text](gambar4.png)
+![alt text](gambar/gambar4.png)
 
 
 ## Menampilkan Nama Manajer Tiap Departemen
@@ -143,7 +143,7 @@ LEFT JOIN Karyawan ON Karyawan.nik = Departemen.manajer_nik;
 
 ***Output :***
 
-![alt text](gambar5.png)
+![alt text](gambar/gambar5.png)
 
 
 ## Menampilkan Nama Supervisor Tiap Karyawan
@@ -156,7 +156,7 @@ LEFT JOIN Departemen ON Departemen.id_dept = Karyawan.id_dept;
 ```
 ***Output :***
 
-![alt text](gambar6.png)
+![alt text](gambar/gambar6.png)
 
 
 ## Menampilkan Daftar Karyawan Yang Bekerja Pada Project A
@@ -169,7 +169,7 @@ WHERE Project.nama = 'A';
 ```
 ***Output :***
 
-![alt text](gambar7.png)
+![alt text](gambar/gambar7.png)
 
 # Soal Latihan Praktikum
 - Buat query untuk menampilkan:
@@ -197,7 +197,7 @@ GROUP BY Project.id_proj;
 ```
 ***Output :***
 
-![alt text](gambar8.png)
+![alt text](gambar/gambar8.png)
 
 
 ## 2. Jumlah Karyawan Tiap Departemen Yang Bekerja Pada Tiap-tiap Project.
@@ -212,7 +212,7 @@ GROUP BY Project.id_proj, Departemen.id_dept;
 ```
 ***Output :***
 
-![alt text](gambar9.png)
+![alt text](gambar/gambar9.png)
 
 
 ## 3. Ada Berapa Project Yang Sedang Dikerjakan Oleh Departemen ***RnD***? (ket: project berjalan adalah yang statusnya 1).
@@ -227,7 +227,7 @@ WHERE Departemen.nama = 'RnD' AND Project.status = 1;
 ```
 ***Output :***
 
-![alt text](gambar10.png)
+![alt text](gambar/gambar10.png)
 
 
 ## 4. Berapa banyak Project yang sedang dikerjakan oleh Ari ?
@@ -240,7 +240,7 @@ WHERE Karyawan.nama = 'Ari' AND Project_detail.id_proj IN (SELECT id_proj FROM P
 ```
 ***Output :***
 
-![alt text](gambar11.png)
+![alt text](gambar/gambar11.png)
 
 
 ## 5. Siapa Saja Yang Mengerjakan Project B ?
@@ -253,9 +253,9 @@ WHERE Project_detail.id_proj IN (SELECT id_proj FROM Project WHERE nama = 'B');
 ```
 ***Output :***
 
-![alt text](gambar12.png)
+![alt text](gambar/gambar12.png)
 
 
 # Model Entitas-Relasi (ERD)
 
-![alt text](<Screenshot 2024-06-25 150931.png>) 
+![alt text](gambar/ERD.png) 
